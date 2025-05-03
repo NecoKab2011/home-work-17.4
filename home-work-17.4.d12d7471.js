@@ -1,0 +1,2 @@
+let e=1;const t=document.querySelector("#image-gallery");function c(){fetch(`https://pixabay.com/api/?key=50072628-8f6f62aa1cc293b82b9b384d5&editors_choice=true&per_page=9&page=${e}`).then(e=>e.json()).then(e=>{e.hits?e.hits.forEach(e=>{let c=document.createElement("img");c.src=e.webformatURL,c.alt=e.tags,t.appendChild(c)}):console.error("Помилка в даних:",e)}).catch(e=>{console.log(e)})}document.querySelector("#load-more-btn").addEventListener("click",function(){e++,c()}),c();
+//# sourceMappingURL=home-work-17.4.d12d7471.js.map
